@@ -1,0 +1,27 @@
+/*
+ * app.c
+ *
+ *  Created on: 2 de set de 2018
+ *      Author: talle
+ */
+#include "main.h"
+#include "stm32f4xx_hal.h"
+#include "app.h"
+
+void app_loop(void)
+{	uint8_t led = 0;
+	uint32_t pin[] = {LED1_Pin, LED2_Pin, LED3_Pin, LED4_Pin};
+	GPIO_TypeDef *ports[] = { LED1_GPIO_Port, LED2_GPIO_Port, LED3_GPIO_Port, LED4_GPIO_Port};
+	while(1)
+		{
+		HAL_GPIO_WritePin(ports[led], pin[led], GPIO_PIN_SET);
+		HAL_Delay(200);
+		HAL_GPIO_WritePin(ports[led], pin[led], GPIO_PIN_RESET);
+		led++;
+		HAL_Delay(200);
+		if(led>=4)
+		{
+			led = 0;
+		}
+		}
+}
