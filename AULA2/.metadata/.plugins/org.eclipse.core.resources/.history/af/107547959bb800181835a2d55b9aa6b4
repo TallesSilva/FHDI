@@ -1,0 +1,61 @@
+/*
+ * app.c
+ *
+ *  Created on: 6 de abr de 2018
+ *      Author: aluno
+ */
+
+#include "main.h"
+#include "stm32f4xx_hal.h"
+#include "app.h"
+
+
+void app_start(void){
+
+while(1)
+{
+	_WFI();
+}
+
+
+}
+
+
+void HAL_SYSTICK_Callback(void){
+
+	static int contador = 0;
+	++contador;
+
+
+	if(contador == 200){
+
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12,GPIO_PIN_SET);
+
+			}
+
+	if(contador == 400){
+
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);
+
+			}
+
+	if(contador == 600){
+
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);
+
+			}
+
+	if(contador == 800){
+
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
+			contador = 0;
+
+			}
+
+
+}
+
