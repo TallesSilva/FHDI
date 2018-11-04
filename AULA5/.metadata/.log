@@ -970,3 +970,6 @@ java.net.ConnectException: Connection timed out: connect
 
 !ENTRY org.eclipse.cdt.core 1 0 2018-10-01 13:31:42.200
 !MESSAGE Indexed 'CubeMX5' (290 sources, 81 headers) in 16 sec: 12.521 declarations; 59.002 references; 0 unresolved inclusions; 153 syntax errors; 2.595 unresolved names (3,5%)
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-10-01 16:10:52.290
+!MESSAGE Unloading product manager
