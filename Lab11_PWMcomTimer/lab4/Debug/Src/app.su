@@ -1,0 +1,2 @@
+app.c:17:6:app_loop	0	static
+app.c:24:6:HAL_GPIO_EXTI_Callback	8	static

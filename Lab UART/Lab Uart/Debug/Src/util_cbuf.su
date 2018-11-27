@@ -1,0 +1,4 @@
+util_cbuf.c:23:20:util_cbuf_init	0	static
+util_cbuf.c:45:20:util_cbuf_get	0	static
+util_cbuf.c:32:20:util_cbuf_flush	16	static
+util_cbuf.c:56:20:util_cbuf_put	8	static

@@ -1,0 +1,7 @@
+app.c:26:6:retrieve_command	16	static
+app.c:83:6:uart_int_init	8	static
+app.c:96:6:app_init	8	static
+app.c:105:6:tratar_comando	80	static
+app.c:37:6:mon_rx_interrupt	0	static
+app.c:62:6:custom_uart3_irq	0	static
+app.c:204:6:app_loop	0	static
